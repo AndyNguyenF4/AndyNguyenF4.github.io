@@ -37,9 +37,9 @@
         // ALL YOUR CODE GOES BELOW HERE ///////////////////////////////////////
         
         // example: 
-        createCollectable(type.steve, 200, 170);   //, 6, 0.7);
-        createCollectable(type.kennedi, 800, 330); //, 6, 0.7);
-        createCollectable(type.grace, 420, 180);
+        createCollectable(type.steve, 170, 390);   //, 6, 0.7);
+        createCollectable(type.kennedi, 800, 310); //,6, 0.7);
+        createCollectable(type.grace, 420, 230);
         
         
         

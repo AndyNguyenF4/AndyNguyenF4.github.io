@@ -43,12 +43,12 @@
         */
 
         // example:
-        createPlatform(400, 250);
-        createPlatform(170, 460, 0.2);
-       
+        createPlatform(360, 300); // top collectable platform
+        createPlatform(170, 460, 0.2); // left collectable platform
+        
         createPlatform(400, 500, 0.2);
         createPlatform(600, 460, 0.2);
-        createPlatform(800, 400, 0.2);
+        createPlatform(800, 380, 0.2); // right collectable platform
         createPlatform(270, 580, 0.2);
         
         // ALL YOUR CODE GOES ABOVE HERE ///////////////////////////////////////
