@@ -45,7 +45,7 @@
         // example:
         createPlatform(360, 300); // top collectable platform
         createPlatform(170, 460, 0.2); // left collectable platform
-        
+        // my platforms
         createPlatform(400, 500, 0.2);
         createPlatform(600, 460, 0.2);
         createPlatform(800, 380, 0.2); // right collectable platform

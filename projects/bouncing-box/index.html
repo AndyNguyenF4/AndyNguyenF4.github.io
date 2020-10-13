@@ -58,17 +58,26 @@
 			//////////////////////////////////////////////////////////////////
 			
 			// TODO 2 - Variable declarations 
-			
-
-			
+			var positionX = 0;
+            var points = 0; 
+            var speed = 10;
+            var colorStr = "rgb(50, 25, 250)";
+            var boxClicks = 0;
+            var acceleration = 3;
 			/* 
 			This Function will be called 20 times/second. Each time it is called,
 			it should move the Box to a new location. If the box drifts off the screen
 			turn it around! 
 			*/
 			function update() {
-				
-
+                if (positionX > boardWidth){
+                    speed *= -1;
+                };  
+                if (positionX < 0){
+                    speed *= -1;
+                };
+                positionX += speed;
+                moveBoxTo(positionX);
 			};
 
 			/* 
@@ -77,10 +86,29 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				
-
-
-			};
+				positionX = 0;
+                points += 1;
+                boxClicks += 1;
+                changeBoxText(points);
+                if (speed > 0){
+                    speed = speed + acceleration; 
+                }
+                else if (speed < 0){
+                    speed = speed - acceleration;
+                }
+                if (boxClicks % 3 === 0){
+                    acceleration += 1
+                }
+                getRandomColor();
+                box.css('background-color', colorStr);
+            };
+            
+            function getRandomColor(){
+                var randomNumberR = Math.random() * 255;
+                var randomNumberG = Math.random() * 255;
+                var randomNumberB = Math.random() * 255;
+                colorStr = "rgb(" + randomNumberR + ", " + randomNumberG + ", " + randomNumberB + ")";
+            };
 		})();
 	</script>
 </body>
