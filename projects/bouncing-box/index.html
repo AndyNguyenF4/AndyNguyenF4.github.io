@@ -23,7 +23,7 @@
 <body class="board">
 	<!-- HTML for the box -->
 	<div class="box">?</div>
-
+     
 	<script>
 		(function(){
 			'use strict'
@@ -109,6 +109,7 @@
                 var randomNumberB = Math.random() * 255;
                 colorStr = "rgb(" + randomNumberR + ", " + randomNumberG + ", " + randomNumberB + ")";
             };
+            changeBoxText(points);
 		})();
 	</script>
 </body>
